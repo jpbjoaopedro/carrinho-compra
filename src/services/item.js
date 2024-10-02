@@ -1,5 +1,10 @@
 // Criar item com subtotal
-async function createItem(name, price, quantity) {
-    
+export async function createItem(name, price, quantity) {
+    return {
+        name,
+        price,
+        quantity,
+        subtotal: () => price * quantity
+    };
 };
 
